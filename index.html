@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Pages</title>
+</head>
+<body>
+    <h1>Welcome to My GitHub Pages</h1>
+    <p>Click on a task to open it:</p>
+
+    <script>
+        const tasks = {
+            "HTML": 5,
+            "CSS": 7,
+            "madebyParth": 6
+        };
+
+        for (const [category, count] of Object.entries(tasks)) {
+            document.write(`<h2>${category === "madebyParth" ? "🟦 Bootstrap (BS)" : category === "CSS" ? "🎨 CSS" : "📌 HTML"} Tasks</h2>`);
+            document.write("<ul>");
+            for (let i = 1; i <= count; i++) {
+                document.write(`<li><a href="${category}/task${i}.html">${category} Task ${i}</a></li>`);
+            }
+            document.write("</ul>");
+        }
+    </script>
+</body>
+</html>
